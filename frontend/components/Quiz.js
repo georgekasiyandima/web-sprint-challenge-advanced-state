@@ -32,7 +32,7 @@ export function Quiz(props) {
               </div>
             </div>
 
-            <button onClick={props.postAnswer} disabled={!props.selectedAnswer} id="submitAnswerBtn">Submit answer</button>
+            <button onClick={() => props.postAnswer(props)} disabled={!props.selectedAnswer} id="submitAnswerBtn">Submit answer</button>
           </>
         ) : 'Loading next quiz...'
       }

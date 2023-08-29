@@ -4,6 +4,7 @@ import * as actionCreators from "../state/action-creators";
 import axios from "axios";
 
 export function Form(props) {
+  
   const onChange = (evt) => {
     const { id, value } = evt.target;
     props.inputChange(id, value);
@@ -68,4 +69,4 @@ export function Form(props) {
   );
 }
 
-export default connect((st) => st, { actionCreators })(Form);
+export default connect((st) => st, actionCreators)(Form);
