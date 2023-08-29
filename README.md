@@ -52,7 +52,7 @@ The endpoints needed for this project are the following:
   - The response to a proper request includes `201 Created` and the newly created quiz object
   - A malformed client payload will result in a `422 Unprocessable Entity` response with a reason
 - `[POST] http://localhost:9000/api/quiz/answer`
-  - Expects a payload with the following properties: `quiz_id`, `answer_id`
+  - Expects a payload with the following properties: `http://localhost:9000/api/quiz/answer`
   - Example of payload: `{ "quiz_id": "LVqUh", "answer_id": "0VEv0" }`
   - A response to a proper request includes `200 OK` and feedback on the answer
 
