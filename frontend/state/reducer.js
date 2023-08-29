@@ -5,11 +5,10 @@ const initialWheelState = 0
 function wheel(state = initialWheelState, action) {
   switch (action.type) {
     case "MOVE_CLOCKWISE":
-      state += 1
+      state= (state+1) % 6
       break;
     case 'MOVE_COUNTERCLOCKWISE':
-      state -= 1
-      break;
+       return (state - 1 + 6) % 6;
     default:
       return state;
   }
@@ -65,7 +64,7 @@ const initialFormState = {
 function form(state = initialFormState, action) {
   switch (action.type) {
     case 'INPUT_CHANGE':
-      state = action.payload
+     state = action.payload
       break;
 
     case 'RESET_FORM':
